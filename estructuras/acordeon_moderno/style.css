@@ -1,0 +1,53 @@
+/*----------------------------------- 1. Acordeón Moderno (Smooth Reveal) ----------------------------*/
+.accordion {
+  max-width: 600px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.accordion-item:last-child {
+  border-bottom: none;
+}
+
+.accordion-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  color: #000000;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  padding: 0 1.5rem;
+  background: transparent;
+  color: #4b5563;
+}
+
+/* Clase activa para abrir */
+.accordion-item.active .accordion-content {
+  /* Se calculará con JS o se pone un valor alto, 
+     pero JS es mejor para animación exacta */
+}
+
+.accordion-item.active .accordion-header .icon {
+  transform: rotate(45deg); /* Efecto de + a x */
+}
+
+.icon {
+  font-size: 1.2rem;
+  transition: transform 0.3s;
+}

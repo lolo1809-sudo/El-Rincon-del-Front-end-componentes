@@ -1,0 +1,24 @@
+/*------------------------------ 2. Card Neo-Brutalism (Pop & Bold)-------------------------------------*/
+
+.card-brutal {
+  width: 300px;
+  background: #ffbd2e; /* Amarillo fuerte */
+  border: 3px solid #000;
+  box-shadow: 6px 6px 0px #000;
+  transition: transform 0.2s, box-shadow 0.2s;
+  color: #000;
+}
+.brutal-header {
+  background: #000;
+  color: #fff;
+  padding: 8px 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.brutal-body {
+  padding: 16px;
+}
+.card-brutal:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 8px 8px 0px #000;
+}

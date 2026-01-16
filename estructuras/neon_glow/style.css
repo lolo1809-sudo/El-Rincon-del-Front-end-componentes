@@ -1,0 +1,40 @@
+/*----------------------------------- 4. Paginación "Neon Glow" ----------------------------*/
+
+.pagination {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+}
+
+.page-link {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  color: #a1a1aa; /* Gris claro */
+  background: #1f1f1f; /* Un poco más claro que el fondo negro */
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.page-link:hover {
+  color: #f1c40f; /* Tu amarillo */
+  border: 1px solid #f1c40f;
+  background: transparent;
+}
+
+.page-link.active {
+  background: #f1c40f;
+  color: #000; /* Texto negro para contraste */
+  box-shadow: 0 0 15px rgba(241, 196, 15, 0.4); /* Glow amarillo */
+}
+
+.dots {
+  color: #666;
+  letter-spacing: 2px;
+}

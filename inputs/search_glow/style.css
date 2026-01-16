@@ -1,0 +1,47 @@
+/* ---------------------------------- 4° Input "Search Glow" ---------------------- */
+
+/* Contenedor tipo cápsula */
+.input-search-container {
+  display: flex;
+  align-items: center;
+  background-color: #161616; /* Fondo oscuro */
+  border: 1px solid #333; /* Borde sutil */
+  border-radius: 50px; /* Bordes muy redondos */
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+  font-family: sans-serif;
+}
+
+/* El icono (lupa) */
+.search-icon {
+  display: flex;
+  align-items: center;
+  color: #666; /* Gris apagado */
+  margin-right: 10px;
+  transition: color 0.3s ease;
+}
+
+/* El campo de texto */
+.search-input {
+  border: none;
+  background: transparent;
+  color: #fff;
+  width: 100%;
+  font-size: 16px;
+  outline: none; /* Quitamos el borde por defecto */
+}
+
+.search-input::placeholder {
+  color: #666;
+}
+
+/* --- LA MAGIA: :focus-within --- */
+/* Si ALGO dentro del contenedor tiene foco, cambia el estilo del contenedor padre */
+.input-search-container:focus-within {
+  border-color: #f1c40f; /* Borde amarillo */
+  box-shadow: 0 0 15px rgba(241, 196, 15, 0.2); /* Resplandor */
+}
+
+.input-search-container:focus-within .search-icon {
+  color: #f1c40f; /* El icono también se pone amarillo */
+}

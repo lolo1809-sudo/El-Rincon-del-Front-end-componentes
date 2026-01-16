@@ -1,0 +1,15 @@
+/*-------------------------- 11. The Tracking Expand (Cinemático) ---------------------*/
+
+.text-track {
+  font-size: 24px;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ccc;
+  transition: letter-spacing 0.5s ease, color 0.5s;
+  cursor: pointer;
+}
+.text-track:hover {
+  letter-spacing: 10px;
+  color: #a0b800;
+}

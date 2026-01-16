@@ -1,0 +1,43 @@
+/*------------------------------ 9. The Ticket / Coupon (Recortes)-------------------------------------*/
+
+.card-ticket {
+  width: 300px;
+  display: flex;
+  background: #ff4757;
+  color: white;
+  filter: drop-shadow(
+    0 4px 6px rgba(0, 0, 0, 0.2)
+  ); /* Sombra real al contorno */
+  border-radius: 8px; /* Bordes suaves generales */
+  overflow: hidden;
+}
+.ticket-left {
+  padding: 20px;
+  border-right: 2px dashed rgba(255, 255, 255, 0.4);
+  position: relative;
+}
+/* Los recortes circulares */
+.ticket-left::before,
+.ticket-left::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #fff; /* Debe coincidir con el color de fondo de tu web */
+  border-radius: 50%;
+  right: -10px;
+}
+.ticket-left::before {
+  top: -10px;
+}
+.ticket-left::after {
+  bottom: -10px;
+}
+
+.ticket-right {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

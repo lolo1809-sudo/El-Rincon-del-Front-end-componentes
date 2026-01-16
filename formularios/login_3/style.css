@@ -1,0 +1,114 @@
+/*--------------------------------- 5. The Portal Login (Spinning Border)----------------------------*/
+
+.login-portal {
+  position: relative;
+  width: 320px;
+  height: 420px;
+  background: #111;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* El borde giratorio */
+.login-portal::before {
+  content: "";
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  background: conic-gradient(transparent, transparent, transparent, #a0b800);
+  animation: rotate 4s linear infinite;
+}
+
+.login-portal::after {
+  content: "";
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  background: conic-gradient(transparent, transparent, transparent, #fff);
+  animation: rotate 4s linear infinite;
+  animation-delay: -2s; /* Desfase para doble color */
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* El contenido interior (tapa el centro) */
+.portal-content {
+  position: absolute;
+  inset: 4px; /* Grosor del borde */
+  background: #161616; /* Color de fondo de la tarjeta */
+  border-radius: 16px;
+  z-index: 10;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.portal-content h2 {
+  color: #a0b800;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.input-group {
+  position: relative;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #333;
+  color: #fff;
+  outline: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.input-group label {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  color: #666;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.input-group input:focus ~ label,
+.input-group input:valid ~ label {
+  top: -15px;
+  font-size: 12px;
+  color: #a0b800;
+}
+
+.input-group input:focus {
+  border-bottom: 2px solid #a0b800;
+}
+
+.portal-content button {
+  margin-top: 10px;
+  padding: 12px;
+  background: #a0b800;
+  color: #000;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.portal-content button:hover {
+  box-shadow: 0 0 15px #a0b800;
+}

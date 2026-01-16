@@ -1,0 +1,80 @@
+/* -------------------------------------------
+   1. SKELETON LOADING "GHOST SHIMMER"
+------------------------------------------- */
+.skeleton-wrapper {
+  width: 100%;
+  max-width: 240px;
+  padding: 15px;
+  background: #252525;
+  border-radius: 12px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  border: 1px solid #333;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Formas base */
+.skeleton-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #333;
+  flex-shrink: 0;
+}
+
+.skeleton-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.skeleton-line {
+  height: 10px;
+  border-radius: 4px;
+  background: #333;
+  width: 100%;
+}
+
+.skeleton-line.title {
+  height: 14px;
+  width: 80%;
+}
+
+.skeleton-line.short {
+  width: 60%;
+}
+
+/* Animación del brillo pasando */
+.skeleton-anim {
+  position: relative;
+  overflow: hidden;
+  background: #333;
+}
+
+.skeleton-anim::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* Gradiente con un toque sutil dorado */
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 215, 0, 0.05) 40%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 215, 0, 0.05) 60%,
+    transparent 100%
+  );
+  transform: translateX(-100%);
+  animation: shimmerWave 2s infinite;
+}
+
+@keyframes shimmerWave {
+  100% {
+    transform: translateX(100%);
+  }
+}

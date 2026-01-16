@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Estructuras Tabs Pestañas</title>
+
+    <!--TIPOGRAGÍA-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--ÍCONOS-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!--Conexión a css-->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h2>Tabs (Pestañas) "Underline Slide"</h2>
+    <div class="tabs-container">
+      <div class="tabs-header">
+        <button class="tab-btn active" data-target="#tab1">General</button>
+        <button class="tab-btn" data-target="#tab2">Detalles</button>
+        <button class="tab-btn" data-target="#tab3">Comentarios</button>
+      </div>
+
+      <div class="tabs-content">
+        <div id="tab1" class="tab-pane active">
+          <h3>Visión General</h3>
+          <p>Este es el contenido principal de la sección.</p>
+        </div>
+        <div id="tab2" class="tab-pane">
+          <h3>Detalles Técnicos</h3>
+          <p>Aquí van las especificaciones y datos duros.</p>
+        </div>
+        <div id="tab3" class="tab-pane">
+          <h3>Opiniones</h3>
+          <p>Lo que dicen nuestros clientes sobre el producto.</p>
+        </div>
+      </div>
+    </div>
+
+    <!--Estructuras JS-->
+    <script src="script.js"></script>
+  </body>
+</html>

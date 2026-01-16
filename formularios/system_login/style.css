@@ -1,0 +1,56 @@
+/*--------------------------------- 2. The Cyber-Frame (Estilo Tech/Neon)----------------------------*/
+
+.login-cyber {
+  width: 300px;
+  padding: 2px; /* Para el borde gradiente */
+  background: linear-gradient(45deg, #a0b800, #005f73);
+  clip-path: polygon(
+    20px 0,
+    100% 0,
+    100% calc(100% - 20px),
+    calc(100% - 20px) 100%,
+    0 100%,
+    0 20px
+  );
+}
+
+.login-cyber input,
+.login-cyber button,
+.cyber-header {
+  display: block;
+  width: 100%;
+  border: none;
+  background: #111;
+  color: #a0b800;
+  font-family: monospace;
+  padding: 15px;
+  margin-bottom: 2px; /* Separación fina */
+}
+
+.cyber-header {
+  background: #000;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #fff;
+}
+
+.login-cyber input:focus {
+  background: #050505;
+  outline: none;
+  color: #fff;
+  box-shadow: inset 5px 0 0 #a0b800;
+}
+
+.login-cyber button {
+  background: #a0b800;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.login-cyber button:hover {
+  background: #fff;
+  letter-spacing: 1px;
+}
