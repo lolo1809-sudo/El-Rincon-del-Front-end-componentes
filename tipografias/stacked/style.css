@@ -1,0 +1,14 @@
+/*-------------------------- 10. The 3D Stack (Retro Pop) ---------------------*/
+
+.text-3d {
+  font-size: 50px;
+  font-weight: 900;
+  color: #a0b800;
+  text-shadow: 2px 2px 0px #eee, 4px 4px 0px #333;
+  transform: skewX(-5deg);
+  transition: 0.2s;
+}
+.text-3d:hover {
+  text-shadow: 4px 4px 0px #eee, 8px 8px 0px #333;
+  transform: skewX(-5deg) translate(-5px, -5px);
+}

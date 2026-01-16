@@ -1,0 +1,15 @@
+/*-------------------------- 7. The Blur Reveal (Cinemático) ---------------------*/
+
+.text-blur {
+  font-size: 40px;
+  color: transparent;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  transition: 0.5s ease;
+  cursor: default;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.text-blur:hover {
+  color: #000000;
+  text-shadow: 0 0 0px rgba(255, 255, 255, 0);
+}

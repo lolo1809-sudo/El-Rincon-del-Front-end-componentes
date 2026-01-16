@@ -1,0 +1,18 @@
+/*-------------------------- 9. The Shimmer (Brillo Metálico) ---------------------*/
+
+.text-shimmer {
+  font-size: 40px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.3);
+  background: linear-gradient(to right, #444 0%, #fff 50%, #444 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s linear infinite;
+}
+
+@keyframes shimmer {
+  to {
+    background-position: 200% center;
+  }
+}

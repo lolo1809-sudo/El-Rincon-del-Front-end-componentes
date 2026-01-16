@@ -1,0 +1,15 @@
+/*-------------------------- 5° Radio Button "Orbit"---------------------*/
+
+.text-hollow {
+  font-size: 50px;
+  font-weight: 900;
+  color: transparent;
+  -webkit-text-stroke: 1px #fff; /* Borde blanco fino */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+.text-hollow:hover {
+  color: #a0b800;
+  -webkit-text-stroke: 1px #a0b800;
+}
